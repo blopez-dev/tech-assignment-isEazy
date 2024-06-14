@@ -9,7 +9,6 @@ Icon
 # Thumbnails
 ._*
 
-**/node_modules
 node_modules
 node_modules/
 
