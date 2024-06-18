@@ -1,29 +1,19 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { Layout, theme } from 'antd';
+import { Layout } from 'antd';
 import { Head } from '@/common/components';
 const { Content } = Layout;
+import { CustomLayout } from './application.styles.ts';
 
 export const AppLayout: React.FC = () => {
-    const {
-        token: { colorBgContainer, borderRadiusLG },
-    } = theme.useToken();
-
     return (
-        <Layout>
+        <CustomLayout>
             <Head />
             <Content style={{ padding: '0 48px' }}>
-                <div
-                    style={{
-                        background: colorBgContainer,
-                        minHeight: 280,
-                        padding: 24,
-                        borderRadius: borderRadiusLG,
-                    }}
-                >
+                <div>
                     <Outlet />
                 </div>
             </Content>
-        </Layout>
+        </CustomLayout>
     );
 };
