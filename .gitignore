@@ -9,8 +9,11 @@ Icon
 # Thumbnails
 ._*
 
-node_modules
-node_modules/
+/node_modules
+/.pnp
+.pnp.js
+.env
+package-lock.json
 
 
 # Files that might appear in the root of a volume

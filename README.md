@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# <h2>isEazy tech assignment</h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    This is a basic SPA based on openweathermap API to get informationa about some locations.
 
-Currently, two official plugins are available:
+# <h3>Summary</h3>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    With this application, the user can check the available time for three cities to choose from: London, Toronto, and Singapore.
+    For each city, the user will see the current weather in that city, a brief summary of some weather conditions such as wind, humidity, etc
 
-## Expanding the ESLint configuration
+# <h3>Tech Stack</h3>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+    - React
+    - Context api
+    - Typescript
+    - Axios
+    - in18
+    - Styled Components
+    - Antd
+    - Vitest
 
-- Configure the top-level `parserOptions` property like this:
+# <h3>Architecture App</h3>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+- **Common**: Main common components to use around the app
+- **config**: Basic configuration for manage translations of the app
+- **context**: Contain the context to manage the main information with language selected by the user
+- **i18n**: Contain all configuration about who to manage the translations of the app
+- **lang**: Contain all files translations of the app
+- **layouts**: In this folder we built a main and reusable basic layout as a template for the app
+- **pages**: Contain all the main views of the app
+- **services**: In this folder has been setting up the main services to get the data from the api
+- **styles**: Contain global styles to use around the app
+- **utils**: This folder has been created to host all the utilities functions to use around the app
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# <h3>Notes</h3>
+
+- To run the app and load the data from the api it is necessary add the api key in the .env file
+
+# <h3>Launch App</h3>
+
+- This project is created with vite, so to launch the app in development mode you must execute the following command:
+
+### `npm run dev`
+
+- To run the app in production mode run the command :
+
+### `npm run build`
+
+- To run all test in the app, run the command :
+
+### `npm run test`
