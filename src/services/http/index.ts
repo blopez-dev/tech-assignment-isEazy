@@ -1,0 +1,63 @@
+import axios from 'axios';
+
+const API_KEY = import.meta.env.VITE_APP_API_KEY;
+const BASE_URL = import.meta.env.VITE_DATA_API_URL;
+console.log(API_KEY);
+
+export const fetchWeatherData = async (
+  location: string
+): Promise<{
+  temperature: number;
+  conditions: string;
+  humidity: number;
+  cityName: string;
+  wind: number;
+  iconCode: string;
+  description: string;
+  feelsLike: number;
+  visibility: number;
+  pressure: number;
+  timeStamp: number;
+  sunrise: number;
+  sunset: number;
+  isSuccessful: boolean;
+}> => {
+  try {
+    const response = await axios.get(`${BASE_URL}?q=${location}&units=metric&appid=${API_KEY}`);
+    const { main, weather, name, wind, visibility, dt, sys } = response.data;
+    const { temp, humidity, feels_like, pressure } = main;
+    return {
+      temperature: temp,
+      conditions: weather[0].main,
+      humidity: humidity,
+      cityName: name,
+      wind: wind.speed,
+      iconCode: weather[0].icon,
+      description: weather[0].description,
+      feelsLike: feels_like,
+      visibility: visibility,
+      pressure: pressure,
+      timeStamp: dt,
+      sunrise: sys.sunrise,
+      sunset: sys.sunset,
+      isSuccessful: true,
+    };
+  } catch (error) {
+    return {
+      temperature: 0,
+      conditions: '',
+      humidity: 0,
+      cityName: '',
+      wind: 0,
+      iconCode: '',
+      description: '',
+      feelsLike: 0,
+      visibility: 0,
+      pressure: 0,
+      timeStamp: 0,
+      sunrise: 0,
+      sunset: 0,
+      isSuccessful: false,
+    };
+  }
+};

@@ -1,7 +1,18 @@
 {
-    "title": "Weather App",
-    "label": "Select another language!",
-    "about": "About me",
-    "home": "Home",
-    "user": "My name is: {{name}}"
+  "title": "Weather App",
+  "label": "Select another language",
+  "currentTime": "Current Weather: ",
+  "location": "Location",
+  "toggleLanguage": "Language",
+  "humidity": "Humidity",
+  "wind": "Wind",
+  "pressure": "Pressure",
+  "sunrise": "Sunrise",
+  "sunset": "Sunset",
+  "visibility": "Visibility",
+  "details": "Details",
+  "current": "Current Weather",
+  "feelsLike": "Feels like",
+  "temperature": "Temperature",
+  "conditions": "Conditions"
 }

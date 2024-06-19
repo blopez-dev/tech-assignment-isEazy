@@ -1,7 +1,18 @@
 {
-    "title": "Aplicación en varios idiomas",
-    "label": "Selecciona otro lenguaje!",
-    "about": "Sobre mí",
-    "home": "Inicio",
-    "user": "Mi nombre es: {{name}}"
+  "title": "Aplicación en varios idiomas",
+  "label": "Selecciona otro lenguaje!",
+  "currentTime": "Tiempo actual: ",
+  "location": "Ubicación",
+  "toggleLanguage": "Idioma",
+  "humidity": "Humedad",
+  "wind": "Viento",
+  "pressure": "Presión",
+  "sunrise": "Amanecer",
+  "sunset": "Atardecer",
+  "visibility": "Visibilidad",
+  "details": "Detalles",
+  "current": "Tiempo actual",
+  "feelsLike": "Sensación",
+  "temperature": "Temperatura",
+  "conditions": "Condiciones"
 }

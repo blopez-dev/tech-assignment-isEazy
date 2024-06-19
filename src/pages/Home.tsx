@@ -1,5 +1,9 @@
-import { useIntl } from 'react-intl';
+import WeatherCard from '@/common/components/WeatherCard/WeatherCard.tsx';
+
 export const HomePage = () => {
-    const intl = useIntl();
-    return <div>{intl.formatMessage({ id: 'home' })}</div>;
+  return (
+    <div>
+      <WeatherCard />
+    </div>
+  );
 };
