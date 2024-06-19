@@ -1,6 +1,8 @@
 {
   "title": "Weather App",
   "label": "Select another language",
+  "citySelector": "Select the weather for a city: ",
+  "weatherSummary": "Detailed time by conditions",
   "currentTime": "Current Weather: ",
   "location": "Location",
   "toggleLanguage": "Language",

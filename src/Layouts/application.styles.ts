@@ -3,5 +3,6 @@ import { Layout } from 'antd';
 import { LayoutProps } from 'antd/es/layout';
 
 export const CustomLayout: typeof Layout = styled(Layout)<LayoutProps>`
-    background-color: #dee2e6;
+  background-color: #dee2e6;
+  min-height: 100vh;
 ` as never;

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Row, Col } from 'antd';
 import { LanguageSwitcher } from '../index.ts';
 import { CountrySelector } from '../index.ts';
-
+import { useIntl } from 'react-intl';
 import { HeaderContainer } from '@/common/components/Header/header.styles.ts';
 import BrandLogo from '../../../assets/brand-logo.png';
 
@@ -11,6 +11,8 @@ type Props = {
 };
 
 export const Head: FC<Props> = ({ onCitySelect }) => {
+  const { formatMessage } = useIntl();
+
   return (
     <HeaderContainer>
       <Row>
@@ -19,7 +21,8 @@ export const Head: FC<Props> = ({ onCitySelect }) => {
             <img src={BrandLogo} alt="Mantine logo" />
           </div>
         </Col>
-        <Col span={8} className="search-input">
+        <Col span={8} className="city-select">
+          <span>{formatMessage({ id: 'citySelector' })}</span>
           <CountrySelector onSelect={onCitySelect} />
         </Col>
         <Col span={8} className="language-select">

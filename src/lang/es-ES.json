@@ -2,6 +2,8 @@
   "title": "Aplicación en varios idiomas",
   "label": "Selecciona otro lenguaje!",
   "currentTime": "Tiempo actual: ",
+  "citySelector": "Selecciona el tiempo para una ciudad: ",
+  "weatherSummary": "Tiempo detallado por condiciones",
   "location": "Ubicación",
   "toggleLanguage": "Idioma",
   "humidity": "Humedad",
