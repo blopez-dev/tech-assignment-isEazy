@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '@/styles/mediaQueries.ts';
 
 export const WeatherCardContainer = styled.div`
   display: flex;
@@ -9,10 +10,24 @@ export const WeatherCardContainer = styled.div`
 
   .current__weather--basic {
     width: 55%;
+    @media ${device.laptop} {
+      width: 50%;
+    }
+    @media ${device.tabletV} {
+      width: 90%;
+      margin: 10px auto;
+    }
   }
 
   .current__weather--summary {
     width: 35%;
+    @media ${device.laptop} {
+      width: 30%;
+    }
+    @media ${device.tabletV} {
+      width: 90%;
+      margin: 10px auto;
+    }
   }
 
   .current__weather {
