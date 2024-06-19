@@ -23,7 +23,7 @@ export const Head: FC<Props> = ({ onCitySelect }) => {
         </Col>
         <Col span={8} className="city-select">
           <span>{formatMessage({ id: 'citySelector' })}</span>
-          <CountrySelector onSelect={onCitySelect} />
+          <CountrySelector onSelect={onCitySelect} data-testid="country-selector" />
         </Col>
         <Col span={8} className="language-select">
           <LanguageSwitcher />

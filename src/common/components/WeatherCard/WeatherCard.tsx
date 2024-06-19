@@ -4,7 +4,7 @@ import { useIntl } from 'react-intl';
 import dayjs from 'dayjs';
 import { fetchWeatherData } from '@/services/http/index.ts';
 import { Head } from '@/common/components';
-import { formatTimestamp } from '@/utils/date';
+import formatTimestamp from '@/utils/date';
 import sunny from '@/assets/weather-icons/sunny.png';
 import clouds from '@/assets/weather-icons/clouds.png';
 import rain from '@/assets/weather-icons/rain.png';
